@@ -3,7 +3,15 @@ import React, { useState } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import { AuthNavigation } from './Authnavigation';
 import { DashboardNavigation } from './DashboardNavigation';
+import { SideDrawerNavigation } from './SideDrawerNavigation';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+
+
+
+
 
 export const AppNavigation = () => {
   const [login , setLogin] = useState("false");
@@ -27,7 +35,7 @@ export const AppNavigation = () => {
   return (
     <NavigationContainer>
       {/* <AuthNavigation/> */}
-      {login=='false'?<DashboardNavigation/>: <AuthNavigation/>}
+      {login=='false'?<SideDrawerNavigation/>: <AuthNavigation/>}
      
     </NavigationContainer>
   );

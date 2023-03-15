@@ -3,7 +3,7 @@ import React from 'react';
 import { TextInput, View, Text } from 'react-native';
 import { Textstyle } from './Textstyle';
 
-const Textinputfield = ({ placeholder,value,secureTextEntry,onChangeText,label }) => {
+const Textinputfield = ({ placeholder,value,secureTextEntry,onChangeText,label,keyboardType ,maxLength}) => {
 
     return (
         <View style={Textstyle.containerStyle}> 
@@ -15,6 +15,9 @@ const Textinputfield = ({ placeholder,value,secureTextEntry,onChangeText,label }
                 value={value}
                 onChangeText={onChangeText}
                 placeholderTextColor={'black'}
+                keyboardType={keyboardType}
+                maxLength={maxLength}
+                
             />
         </View>
 
